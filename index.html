@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Pokedex</title>
 </head>
@@ -15,51 +14,54 @@
                         <div class="topBase">
                             <div class="ledPequeno1"></div>
                             <div class="ledPequeno2"></div>
-                            <div class="tela"></div>
+                            <div class="tela">
+                                <img class="imagemPokemon" src="#" alt="Pokemon">
+                            </div>
                             <div class="ledMedio"></div>
     
                             <div class="ventuinha"></div>
                             <div class="ventuinha"></div>
                             <div class="ventuinha"></div>
                             <div class="ventuinha"></div>
+                            <audio id="cryPokemon" src="#"></audio>
                         </div>
                         <div class="underBase"></div>
                     </div>
                 </div>
                 <div class="led1"></div>
                 <div class="led2"></div>
-                <button class="botaoRedondo"></button>
-                <label class="barraPesquisa">
-                    <input type="text">
+                <button title="Pesquisar" class="botaoRedondo"></button>
+                <label title="Barra de Pesquisa" class="barraPesquisa">
+                        <input class="pesquisar" type="text" >
                 </label>
                 <div class="setinhas">
                     <div class="setaCima">
-                        <div class="corpoSeta"></div>
-                        <div class="trianguloInvertido"></div>
+                        <div class="corpoSeta corpoSetaCima"></div>
+                        <div class="trianguloInvertido baixoSetaCima"></div>
                     </div>
                     <div class="setaDireita">
-                        <div class="corpoSeta"></div>
-                        <div class="trianguloInvertido"></div>
+                        <div class="corpoSeta corpoSetaDireita"></div>
+                        <div class="trianguloInvertido baixoSetaDireita"></div>
                     </div>
                     <div class="setaBaixo">
-                        <div class="corpoSeta"></div>
-                        <div class="trianguloInvertido"></div>
+                        <div class="corpoSeta corpoSetaBaixo"></div>
+                        <div class="trianguloInvertido baixoSetaBaixo"></div>
                     </div>
                     <div class="setaEsquerda">
-                        <div class="corpoSeta"></div>
-                        <div class="trianguloInvertido"></div>
+                        <div class="corpoSeta corpoSetaEsquerda"></div>
+                        <div class="trianguloInvertido baixoSetaEsquerda"></div>
                     </div>
                 </div>
             </div>
             <div class="retanguloInvertido">
                 <div class="ledPequenos">
-                    <div class="ledPequeno1">
+                    <div class="ledPequeno1 ledPequenoVermelho">
                         <div class="luz"></div>
                     </div>
-                    <div class="ledPequeno2">
+                    <div class="ledPequeno2 ledPequenoAmarelo">
                         <div class="luz"></div>
                     </div>
-                    <div class="ledPequeno3">
+                    <div class="ledPequeno3 ledPequenoVerde">
                         <div class="luz"></div>
                     </div>
                 </div>
@@ -92,19 +94,22 @@
         <div id="tampa">
             <div class="trapezio"></div>
             <div class="retangulo"></div>
-            <div class="tela2"></div>
+            <div class="tela2">
+                <h1 class="titulo"></h1>
+                <p class="descricao"></p>
+            </div>
             <div class="botoesAzuis">
-                <button class="botao1 botaoAzul"></button>
-                <button class="botaoAzul"></button>
-                <button class="botaoAzul"></button>
-                <button class="botaoAzul"></button>
-                <button class="botao2 botaoAzul"></button>
+                <button title="Nome e Número" class="botao1 botaoAzul"></button>
+                <button title="Descrição" class="botaoAzul"></button>
+                <button title="Altura" class="botaoAzul"></button>
+                <button title="Peso" class="botaoAzul"></button>
+                <button title="Som" class="botao2 botaoAzul"></button>
     
-                <button class="botao4 botaoAzul"></button>
-                <button class="botaoAzul"></button>
-                <button class="botaoAzul"></button>
-                <button class="botaoAzul"></button>
-                <button class="botao3 botaoAzul"></button>
+                <button title="Habilidades" class="botao4 botaoAzul"></button>
+                <button title="Cadeia Evolutiva" class="botaoAzul"></button>
+                <button title="Status Base" class="botaoAzul"></button>
+                <button title="Versão Shiny" class="botaoAzul"></button>
+                <button title="Versão Normal" class="botao3 botaoAzul"></button>
             </div>
             <div class="botoesMenoresPretos">
                 <button class="botao1"></button>
@@ -112,18 +117,20 @@
             </div>
             <div>
                 <div class="botoesMenoresBrancos">
-                    <button class="botao1"></button>
-                    <button class="botao2"></button>
+                    <button title="Pokémon de Frente" class="botao1"></button>
+                    <button title="Pokémon de Costas" class="botao2"></button>
                 </div>
                 <div class="ledAmarelo">
                     <div class="luz"></div>
                 </div>
             </div>
             <div class="botoesMaioresPretos">
-                <button class="botao1"></button>
-                <button class="botao2"></button>
+                <button title="Pokémon Anterior" class="botao1 botaoAnt"></button>
+                <button title="Próximo Pokémon" class="botao2 botaoProx"></button>
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="pokedexDesign.js"></script>
+    <script type="text/javascript" src="pokedex.js"></script>
 </body>
 </html>
