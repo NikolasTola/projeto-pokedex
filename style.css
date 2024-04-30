@@ -1,0 +1,594 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+}
+#pokedex{
+    height: 800px;
+    width: 1005px;
+
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+}
+button{
+    border: none;
+    outline: none;
+}
+#tampa{
+    height: 700px;
+    position: relative;
+    top: -451px;
+    left: -5px;
+}
+.trapezio{
+    border-bottom: 99px solid #db0b2d;
+    border-right: 100px solid transparent;
+    height: 0;
+    width: 154px;
+  }
+.retangulo{
+    background-color: #db0b2d;
+    height: 600px;
+    width: 500px;
+
+    border-radius: 0 10px 10px 0;
+}
+.tela2{
+    background-color: #232323;
+    width: 380px;
+    height: 120px;
+    border-radius: 10px;
+
+    position: relative;
+    top: -540px;
+    left: 60px;
+}
+
+.botoesAzuis{
+    width: 380px;
+    height: 124px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    position: relative;
+
+    top: -520px;
+    left: 60px;
+}
+.botoesAzuis .botao1{
+    border-radius: 3px 0 0 0;
+}
+.botoesAzuis .botao2{
+    border-radius: 0 3px 0 0;
+}
+.botoesAzuis .botao3{
+    border-radius: 0 0 3px 0;
+}
+.botoesAzuis .botao4{
+    border-radius: 0 0 0 3px;
+}
+.botaoAzul{
+    background-color: lightblue;
+    width: 74px;
+    height: 60px;
+}
+.botaoAzul:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+.botoesMenoresPretos{
+    position: relative;
+    top: -515px;
+    left: 317px;
+}
+.botoesMenoresPretos button{
+    background-color: #232323;
+    width: 60px;
+    height: 10px;
+    border-radius: 5px;
+
+    position: relative;
+    
+}
+.botoesMenoresPretos button:hover{
+    background-color: blue;
+    cursor: pointer;
+
+}
+
+.botoesMenoresBrancos{
+    width: 152px;
+    height: 62px;
+
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid black;
+
+    position: relative;
+    top: -509px;
+    left: 60px;
+}
+.botoesMenoresBrancos button{
+    background-color: #dedede;
+
+    width: 74px;
+    height: 60px;
+}
+
+.botoesMenoresBrancos .botao1{
+    border-radius: 3px 0 0 3px;
+}
+.botoesMenoresBrancos .botao2{
+    border-radius: 0 3px 3px 0;
+}
+.botoesMenoresBrancos button:hover{
+    background-color: blue;
+    cursor: pointer;
+
+}
+
+.ledAmarelo{
+    background-color: #bda51f;
+
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid black;
+
+    position: relative;
+    top: -555px;
+    left: 378px;
+}
+.luz{
+    background-color: rgb(255, 255, 88);
+
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+.botoesMaioresPretos{
+    width: 380px;
+    height: 62px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+    top: -505px;
+    left: 60px;
+}
+.botoesMaioresPretos button{
+    background-color: #232323;
+    
+    width: 170px;
+    height: 60px;
+
+    border-radius: 5px;
+}
+.botoesMaioresPretos button:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.trapezioInvertido{
+    border-top: 100px solid #fa647d;
+    border-right: 100px solid transparent;
+    height: 0;
+    width: 200px;
+
+    position: relative;
+    top: -800px;
+}
+.retanguloInvertido{
+    height: 100px;
+    width: 500px;
+    background-color: #fa647d;
+    border-radius: 10px 10px 0 0;
+
+    position: relative;
+    top: -800px;
+}
+.main{
+    width: 500px;
+    height: 800px;
+    background-color: #db0b2d;
+    border-radius: 10px;
+}
+.dobradica{
+    position: relative;
+    top: -900px;
+    left: 454px;
+
+    display: inline-block;
+    width: 46px;
+    height: 700px;
+}
+.curva1, .curva2{
+    width: 60px; 
+    height: 50px;  
+    border: solid 5px #a31930;
+    border-color: #a31930 transparent transparent transparent;
+    border-radius: 50%/50px 50px 0 0;
+    position: relative;
+
+    left: -12px;
+    top: 0px;
+  }
+  .parte1{
+    border-radius: 10px 10px 0 0;
+  }
+  .parte1, .parte3{
+    background-color: #fa647d;
+    height: 50px;
+    width: 46px;
+  }
+.parte3{
+    border-radius: 50px 46px 10px 10px;
+    position: relative;
+    top: -24px;
+}
+.parte2{
+    background-color: #fa647d;
+    height: 625px;
+    width: 46px;
+    border-radius: 50px 46px 0 0;
+
+    position: relative;
+    top: -12px;
+}
+
+.luzDobradica1{
+    background-color: #faa6b4;
+    width: 10px;
+    height: 50px;
+
+    position: relative;
+    left: 10px;
+}
+.luzDobradica3{
+    background-color: #faa6b4;
+    width: 10px;
+    height: 45px;
+
+    position: relative;
+    left: 10px;
+    top: -55px;
+
+    border-radius: 50px 0 0 0;
+}
+.luzDobradica2{
+    background-color: #faa6b4;
+    width: 10px;
+    height: 615px;
+
+    position: relative;
+    left: 10px;
+    top: -55px;
+
+    border-radius: 50px 0 0 0;
+}
+.ledPequenos{
+    display: flex;
+    position: relative;
+    left: 160px;
+    top: 15px;
+}
+
+.ledPequeno1,.ledPequeno2,.ledPequeno3{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 5px;
+}
+.ledPequeno1{
+    background-color: #800417;
+}
+.ledPequeno2{
+    background-color: #bda51f;
+}
+.ledPequeno3{
+    background-color: #345733;
+}
+.ledPequeno1 .luz{
+    width: 10px;
+    height: 10px;
+    background-color: #c5384d;
+    position: relative;
+    top: -3px;
+    left: -3px;
+}
+.ledPequeno2 .luz{
+    width: 10px;
+    height: 10px;
+    background-color: #dfcc62;
+    position: relative;
+    top: -3px;
+    left: -3px;
+}
+.ledPequeno3 .luz{
+    width: 10px;
+    height: 10px;
+    background-color: #87ac86;
+    position: relative;
+    top: -3px;
+    left: -3px;
+}
+.ledGrande .base{
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ledGrande .led{
+    height: 100px;
+    width: 100px;
+    background-color: #19699e;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.led .luz{
+    height: 40px;
+    width: 40px;
+    background-color: #79b5dd;
+
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+.ledGrande{
+    position: relative;
+    top:-170px;
+    left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+.mostruario{
+    
+    position: relative;
+    top: 225px;
+    left: 42px;
+    width:375px;
+}
+.base{
+    width: 375px;
+}
+.base .underBase{
+    border-top: 50px solid #dedede;
+    border-left: 50px solid transparent;
+    height: 0;
+    width: 325px;
+
+    border-radius: 0px 0px 10px 0px;
+}
+.base .topBase{
+    background-color: #dedede;
+    height: 300px;
+    width: 375px;
+
+    border-radius: 10px 10px 0px 0px;
+}
+.topBase .ledPequeno1, .topBase .ledPequeno2{
+    width: 10px;
+    height: 10px;
+
+    border: 1px solid black;
+    background-color: #800417;
+
+    display: inline-block;
+
+    margin: 0 20px 20px 0;
+
+    position: relative;
+
+    top: 12px;
+    left: 175px;
+}
+.topBase .tela{
+    width: 290px;
+    height: 240px;
+    background-color: #232323;
+    border-radius: 10px;
+
+    position: relative;
+    left: 45px;
+}
+.topBase .ledMedio{
+    height: 20px;
+    width: 20px;
+
+    border: 1px solid black;
+    background-color: #800417;
+    border-radius: 50%;
+
+    position: relative;
+    top: 25px;
+    left: 45px;
+}
+.ventuinha{
+    height: 2px;
+    width: 60px;
+
+    background-color: #232323;
+
+    position: relative;
+
+    top: -15px;
+    left: 275px;
+    margin-top: 10px;
+}
+.container{
+    max-height: 800px;
+}
+.container .led1, .container .led2{
+    background-color: #dedede;
+    height: 8px;
+    width: 45px;
+    margin: 0 60px 30px 0;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid black;
+
+    position: relative;
+    top: 235px;
+    left: 125px;
+}
+.container .led1{
+    background-color: #800417;
+}
+.container .led2{
+    background-color:rgb(20, 20, 119);
+}
+.botaoRedondo{
+    height: 55px;
+    width: 55px;
+    background-color: #232323;
+
+    border: 1px solid black;
+    border-radius: 50%;
+
+    position: relative;
+
+    left: -185px;
+    top: 300px;
+}
+.botaoRedondo:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+.barraPesquisa{
+    display: inline-block;
+    width: 185px;
+    height: 100px;
+    background-color: #52ae5f;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    position: relative;
+    top: 245px;
+    left: -170px;
+
+    text-align: center;
+    outline: #79b5dd;
+    z-index: 999;
+}
+.barraPesquisa:hover{
+    cursor: pointer;
+}
+.barraPesquisa input{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    text-align: center;
+    width: 145px;
+    color: #ffffff;
+    outline: none;
+    font-size: 20px;
+    border: none;
+    background: transparent;
+}
+
+
+.trianguloInvertido{
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #232323;
+}
+.corpoSeta{
+    background-color: #232323;
+    width: 30px;
+    height: 50px;
+
+    border-radius: 10px 10px 0 0;
+}
+.setaCima{
+    position: relative;
+    top:0;
+
+    width: 30px;
+}
+.setaEsquerda{
+    transform: rotate(270deg);
+    position: relative;
+    top: -163px;
+    left: -32px;
+
+    width: 30px;
+}
+.setaDireita{
+    transform: rotate(90deg);
+    position: relative;
+    top: -33px;
+    left: 32px;
+
+    width: 30px;
+}
+.setaBaixo{
+    transform: rotate(180deg);
+    position: relative;
+    top: -66px;
+    left: 0;
+
+    width: 30px;
+}
+.setinhas{
+    position: relative;
+    top: 127px;
+    left: 360px;
+
+    width: 80px;
+    height: 130px;
+
+}
+.container, #tampa{
+    display: inline-block;
+}
