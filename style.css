@@ -1,535 +1,469 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 
+:root{
+    --cor-principal: #db0b2d;
+    --cor-secundaria: #fa647d;
+}
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Oxanium', cursive;
 }
 body{
-    height: 100vh;
-    
+    min-height: 100vh;
+    text-align: center;
+}
+main{
+    display: inline-block;
 }
 #pokedex{
-    height: 800px;
-    width: 1005px;
-
-    position: fixed;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 15px 0 15px;
+    margin-top: 15px;
 
 }
-button{
-    border: none;
-    outline: none;
-}
-#tampa{
+/* ----- CONTAINER PRINCIPAL ----- */
+#containerPrincipal{
+    background-color: var(--cor-principal);
+    width: 437.5px;
     height: 700px;
-    position: relative;
-    top: -451px;
-    left: -5px;
-}
-.trapezio{
-    border-bottom: 99px solid #db0b2d;
-    border-right: 100px solid transparent;
-    height: 0;
-    width: 154px;
-  }
-.retangulo{
-    background-color: #db0b2d;
-    height: 600px;
-    width: 500px;
-
-    border-radius: 0 10px 10px 0;
-}
-.tela2{
-    background-color: #232323;
-    width: 380px;
-    height: 120px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 10px;
 
     position: relative;
-    top: -540px;
-    left: 60px;
 }
-
-.botoesAzuis{
-    width: 380px;
-    height: 124px;
-    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    background-color: black;
-    justify-content: space-around;
-    align-items: center;
-
-    border: 1px solid black;
-    border-radius: 5px;
-
-    position: relative;
-
-    top: -520px;
-    left: 60px;
-}
-.botoesAzuis .botao1{
-    border-radius: 3px 0 0 0;
-}
-.botoesAzuis .botao2{
-    border-radius: 0 3px 0 0;
-}
-.botoesAzuis .botao3{
-    border-radius: 0 0 3px 0;
-}
-.botoesAzuis .botao4{
-    border-radius: 0 0 0 3px;
-}
-.botaoAzul{
-    background-color: lightblue;
-    width: 74px;
-    height: 60px;
-}
-.botaoAzul:hover{
-    background-color: blue;
-    cursor: pointer;
-}
-
-.botoesMenoresPretos{
-    position: relative;
-    top: -515px;
-    left: 317px;
-}
-.botoesMenoresPretos button{
-    background-color: #232323;
-    width: 60px;
-    height: 10px;
-    border-radius: 5px;
-
-    position: relative;
-    
-}
-.botoesMenoresPretos button:hover{
-    background-color: blue;
-    cursor: pointer;
-
-}
-
-.botoesMenoresBrancos{
-    width: 152px;
-    height: 62px;
-
-    display: flex;
-    flex-direction: row;
-    background-color: black;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 5px;
-    border: 1px solid black;
-
-    position: relative;
-    top: -509px;
-    left: 60px;
-}
-.botoesMenoresBrancos button{
-    background-color: #dedede;
-
-    width: 74px;
-    height: 60px;
-}
-
-.botoesMenoresBrancos .botao1{
-    border-radius: 3px 0 0 3px;
-}
-.botoesMenoresBrancos .botao2{
-    border-radius: 0 3px 3px 0;
-}
-.botoesMenoresBrancos button:hover{
-    background-color: blue;
-    cursor: pointer;
-
-}
-
-.ledAmarelo{
-    background-color: #bda51f;
-
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    border: 1px solid black;
-
-    position: relative;
-    top: -555px;
-    left: 378px;
-}
-.luz{
-    background-color: rgb(255, 255, 88);
-
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-
-    margin-top: 6px;
-    margin-left: 6px;
-}
-
-.botoesMaioresPretos{
-    width: 380px;
-    height: 62px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    position: relative;
-    top: -505px;
-    left: 60px;
-}
-.botoesMaioresPretos button{
-    background-color: #232323;
-    
-    width: 170px;
-    height: 60px;
-
-    border-radius: 5px;
-}
-.botoesMaioresPretos button:hover{
-    background-color: blue;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-.trapezioInvertido{
-    border-top: 100px solid #fa647d;
-    border-right: 100px solid transparent;
-    height: 0;
-    width: 200px;
-
-    position: relative;
-    top: -800px;
-}
-.retanguloInvertido{
+#containerPrincipal .parteCima .retangulo{
     height: 100px;
-    width: 500px;
-    background-color: #fa647d;
+    width: 437.5px;
+    background-color: var(--cor-secundaria);
     border-radius: 10px 10px 0 0;
-
+}
+/* ----- LED GRANDE AZUL ----- */
+#containerPrincipal .parteCima .trapezio #ledGrande{
     position: relative;
-    top: -800px;
+    top: -180px;
+    left: 20px;
 }
-.main{
-    width: 500px;
-    height: 800px;
-    background-color: #db0b2d;
-    border-radius: 10px;
-}
-.dobradica{
-    position: relative;
-    top: -900px;
-    left: 454px;
-
-    display: inline-block;
-    width: 46px;
-    height: 700px;
-}
-.curva1, .curva2{
-    width: 60px; 
-    height: 50px;  
-    border: solid 5px #a31930;
-    border-color: #a31930 transparent transparent transparent;
-    border-radius: 50%/50px 50px 0 0;
-    position: relative;
-
-    left: -12px;
-    top: 0px;
-  }
-  .parte1{
-    border-radius: 10px 10px 0 0;
-  }
-  .parte1, .parte3{
-    background-color: #fa647d;
-    height: 50px;
-    width: 46px;
-  }
-.parte3{
-    border-radius: 50px 46px 10px 10px;
-    position: relative;
-    top: -24px;
-}
-.parte2{
-    background-color: #fa647d;
-    height: 625px;
-    width: 46px;
-    border-radius: 50px 46px 0 0;
-
-    position: relative;
-    top: -12px;
-}
-
-.luzDobradica1{
-    background-color: #faa6b4;
-    width: 10px;
-    height: 50px;
-
-    position: relative;
-    left: 10px;
-}
-.luzDobradica3{
-    background-color: #faa6b4;
-    width: 10px;
-    height: 45px;
-
-    position: relative;
-    left: 10px;
-    top: -55px;
-
-    border-radius: 50px 0 0 0;
-}
-.luzDobradica2{
-    background-color: #faa6b4;
-    width: 10px;
-    height: 615px;
-
-    position: relative;
-    left: 10px;
-    top: -55px;
-
-    border-radius: 50px 0 0 0;
-}
-.ledPequenos{
-    display: flex;
-    position: relative;
-    left: 160px;
-    top: 15px;
-}
-
-.ledPequeno1,.ledPequeno2,.ledPequeno3{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    border: 1px solid black;
-    margin: 5px;
-}
-.ledPequeno1{
-    background-color: #800417;
-}
-.ledPequeno2{
-    background-color: #bda51f;
-}
-.ledPequeno3{
-    background-color: #345733;
-}
-.ledPequeno1 .luz{
-    width: 10px;
-    height: 10px;
-    background-color: #c5384d;
-    position: relative;
-    top: -3px;
-    left: -3px;
-}
-.ledPequeno2 .luz{
-    width: 10px;
-    height: 10px;
-    background-color: #dfcc62;
-    position: relative;
-    top: -3px;
-    left: -3px;
-}
-.ledPequeno3 .luz{
-    width: 10px;
-    height: 10px;
-    background-color: #87ac86;
-    position: relative;
-    top: -3px;
-    left: -3px;
-}
-.ledGrande .base{
+#containerPrincipal .parteCima .trapezio #ledGrande .base{
     height: 120px;
     width: 120px;
     background-color: white;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 2px solid black;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.ledGrande .led{
+#containerPrincipal .parteCima .trapezio #ledGrande .base .led{
     height: 100px;
     width: 100px;
     background-color: #19699e;
     border-radius: 50%;
     border: 1px solid black;
 }
-.led .luz{
+#containerPrincipal .parteCima .trapezio #ledGrande .base .led .luz{
     height: 40px;
     width: 40px;
     background-color: #79b5dd;
+    border-radius: 50%;
 
     position: relative;
-    top: 5px;
-    left: 5px;
+    top: 12px;
+    left: 12px;
 }
-.ledGrande{
+/* ----- LED PESQUISA ----- */
+#containerPrincipal .parteCima .retangulo #ledPesquisa{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+
     position: relative;
-    top:-170px;
-    left: 30px;
+    top: 20px;
+    left: 150px;
 }
-
-
-
-
-
-
-
-
-
-
-.mostruario{
-    
+#containerPrincipal .parteCima .retangulo #ledPesquisa .ledVermelho{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: #800417
+}
+#containerPrincipal .parteCima .retangulo #ledPesquisa .ledVermelho .luz{
+    width: 13px;
+    height: 13px;
+    background-color: #c5384d;
+    border-radius: 50%;
     position: relative;
-    top: 225px;
-    left: 42px;
-    width:375px;
+    top: 2.5px;
+    left: 2.5px;
 }
-.base{
-    width: 375px;
+#containerPrincipal .parteCima .retangulo #ledPesquisa .ledVerde{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color:#345733;
 }
-.base .underBase{
-    border-top: 50px solid #dedede;
-    border-left: 50px solid transparent;
+#containerPrincipal .parteCima .retangulo #ledPesquisa .ledVerde .luz{
+    width: 13px;
+    height: 13px;
+    background-color: #87ac86;
+    border-radius: 50%;
+    position: relative;
+    top: 2.5px;
+    left: 2.5px;
+}
+#containerPrincipal .parteCima .retangulo #ledPesquisa .ledAmarelo{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: #bda51f;
+}
+#containerPrincipal .parteCima .retangulo #ledPesquisa .ledAmarelo .luz{
+    width: 13px;
+    height: 13px;
+    background-color: #dfcc62;
+    border-radius: 50%;
+    position: relative;
+    top: 2.5px;
+    left: 2.5px;
+}
+#containerPrincipal .parteCima .trapezio{
+    border-top: 100px solid #fa647d;
+    border-right: 100px solid transparent;
     height: 0;
-    width: 325px;
-
-    border-radius: 0px 0px 10px 0px;
+    width: 250px;
 }
-.base .topBase{
+/* ----- DOBRADICA ----- */
+#dobradica{
+    display: inline-block;
+    width: 40px;
+    height: 600px;
+
+    position: absolute;
+    top:100px;
+    left:397.5px;
+}
+#dobradica .parte1, #dobradica .parte3{
+    background-color: var(--cor-secundaria);
+    height: 50px;
+    width: 40px;
+}
+#dobradica .parte1{
+    border-radius: 10px 10px 10px 10px;
+}
+#dobradica .parte3{
+    border-radius: 50px 46px 10px 10px;
+    position: relative;
+    top: -26px;
+}
+#dobradica .parte2{
+    background-color: var(--cor-secundaria);
+    height: 528px;
+    width: 40px;
+    border-radius: 50px 46px 0 0;
+
+    position: relative;
+    top: -15px;
+
+}
+#dobradica .parte2 .curva, #dobradica .parte3 .curva{
+    width: 60px; 
+    height: 60px;  
+    border: solid 5px #a31930;
+    border-color: #a31930 transparent transparent transparent;
+    border-radius: 50%/50px 50px 0 0;
+
+    position: relative;
+    left: -10px;
+}
+#dobradica .parte1 .luz, #dobradica .parte3 .luz{
+    background-color: #faa6b4;
+    width: 7px;
+    height: 50px;
+
+    position: relative;
+    left: 10px;
+}
+#dobradica .parte2 .luz{
+    background-color: #faa6b4;
+    width: 7px;
+    height: 525px;
+
+    position: relative;
+    top:-55px;
+    left: 10px;
+    border-radius: 10px 0 0 0 ;
+}
+#dobradica .parte3 .luz{
+    top:-55px;
+    height: 45px;
+    border-radius: 10px 0 0 0 ;
+}
+/* ----- TELA PRINCIPAL ----- */
+
+#containerPrincipal .parteMeio{
+    display: flex;
+    justify-content: center;
+}
+#containerPrincipal .parteMeio #telaPrincipal{
+    position: relative;
+    left: -20px;
+    top:20px;
+}
+#containerPrincipal .parteMeio #telaPrincipal .base .retangulo{
     background-color: #dedede;
-    height: 300px;
-    width: 375px;
-
+    height: 262.5px;
+    width: 328px;
     border-radius: 10px 10px 0px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.topBase .ledPequeno1, .topBase .ledPequeno2{
+#containerPrincipal .parteMeio #telaPrincipal .base .retangulo .ledPequenos{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    position: relative;
+    top: -12px;
+}
+#containerPrincipal .parteMeio #telaPrincipal .base .retangulo .ledPequenos .led{
     width: 10px;
     height: 10px;
-
     border: 1px solid black;
     background-color: #800417;
-
-    display: inline-block;
-
-    margin: 0 20px 20px 0;
-
-    position: relative;
-
-    top: 12px;
-    left: 175px;
+    border-radius: 50%;
 }
-.topBase .tela{
-    width: 290px;
-    height: 240px;
+#containerPrincipal .parteMeio #telaPrincipal .base .retangulo .tela{
+    width: 270px;
+    height: 200px;
     background-color: #232323;
     border-radius: 10px;
-
-    position: relative;
-    left: 45px;
 }
-.topBase .ledMedio{
+#containerPrincipal .parteMeio #telaPrincipal .base .trapezio{
+    border-top: 45px solid #dedede;
+    border-left: 50px solid transparent;
+    height: 0;
+    width: 328px;
+    border-radius: 0px 0px 10px 0px;
+}
+#containerPrincipal .parteMeio #telaPrincipal .base .trapezio .ledMedio{
     height: 20px;
     width: 20px;
-
     border: 1px solid black;
     background-color: #800417;
     border-radius: 50%;
 
     position: relative;
-    top: 25px;
-    left: 45px;
+    top:-50px;
+    left:-15px;
 }
-.ventuinha{
-    height: 2px;
-    width: 60px;
-
-    background-color: #232323;
+#containerPrincipal .parteMeio #telaPrincipal .base .trapezio .ventuinhas{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: max-content;
 
     position: relative;
+    top: -79px;
+    left: 165px;
+}
+#containerPrincipal .parteMeio #telaPrincipal .base .trapezio .ventuinhas .ventuinha{
+    height: 4px;
+    width: 80px;
+    background-color: #232323;
+}
+/* ----- SIMBOLOS TELA ----- */
+#estrela{
+    margin: 100px;
+    position: relative;
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid goldenrod;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg) scale(0.2);
 
-    top: -15px;
-    left: 275px;
-    margin-top: 10px;
+    position: absolute;
+    top: -70px;
+    left: -140px;
+    display: none;
 }
-.container{
-    max-height: 800px;
+#estrela:before{
+    border-bottom: 80px solid goldenrod;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
 }
-.container .led1, .container .led2{
-    background-color: #dedede;
+#estrela:after {
+    position: absolute;
+    display: block;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid goldenrod;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
+#femaleSymbol{
+    transform: scale(0.4);
+    width: max-content;
+    height: max-content;
+
+    position: absolute;
+    top: 6px;
+    left: 253px;
+    display: none;
+}
+#femaleSymbol .parteCima{
+    width: 50px;
+    height: 50px;
+    border: 10px solid #d060ac;
+    border-radius: 50%;
+}
+#femaleSymbol .parteBaixo{
+    position: relative;
+    top: -10px;
+    left: 20px;
+}
+#femaleSymbol .parteBaixo .traco1{
+    height: 40px;
+    width: 10px;
+    background-color: #d060ac;
+    border-radius: 10px;
+}
+#femaleSymbol .parteBaixo .traco2{
+    height: 40px;
+    width: 10px;
+    background-color: #d060ac;
+    border-radius: 10px;
+    transform: rotate(90deg);
+
+    position: relative;
+    top: -37px;
+    left: 0;
+}
+#maleSymbol{
+    transform: scale(0.4);
+    width: max-content;
+    height: max-content;
+
+    position: absolute;
+    top: 0;
+    left: 253px;
+}
+#maleSymbol .parteCima{
+    width: 50px;
+    height: 50px;
+    border: 10px solid #5574b8;
+    border-radius: 50%;
+}
+#maleSymbol .parteBaixo .traco1{
+    height: 40px;
+    width: 10px;
+    background-color: #5574b8;
+    border-radius: 10px;
+}
+#maleSymbol .parteBaixo .traco2{
+    height: 30px;
+    width: 10px;
+    background-color: #5574b8;
+    border-radius: 10px;
+    transform: rotate(45deg);
+
+    position: relative;
+    top: -25px;
+    left: 7px;
+}
+#maleSymbol .parteBaixo .traco3{
+    height: 30px;
+    width: 10px;
+    background-color: #5574b8;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+
+    position: relative;
+    top: -55px;
+    left: -7px;
+}
+#maleSymbol .parteBaixo{
+    position: relative;
+    top: -9px;
+    left: 20px;
+}
+/* ----- IMAGEM TELA ----- */
+#imagemTelaPrincipal{
+    position: absolute;
+    left: 60px;
+    top: 35px;
+    height: 65%;
+    user-select: none;
+}
+/* ----- PARTE BAIXO ----- */
+#containerPrincipal .parteBaixo{
+    position: relative;
+}
+/* ----- LED MENORES ----- */
+#ledMenores{
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    top: 35px;
+    left: 105px;
+}
+#ledMenores .led1{
+    background-color: #800417;
     height: 8px;
-    width: 45px;
+    width: 40px;
     margin: 0 60px 30px 0;
-    display: inline-block;
     border-radius: 10px;
     border: 1px solid black;
-
-    position: relative;
-    top: 235px;
-    left: 125px;
 }
-.container .led1{
-    background-color: #800417;
-}
-.container .led2{
-    background-color:rgb(20, 20, 119);
-}
-.botaoRedondo{
-    height: 55px;
-    width: 55px;
-    background-color: #232323;
-
+#ledMenores .led2{
+    background-color: #141477;
+    ;
+    height: 8px;
+    width: 40px;
+    margin: 0 60px 30px 0;
+    border-radius: 10px;
     border: 1px solid black;
-    border-radius: 50%;
-
-    position: relative;
-
-    left: -185px;
-    top: 300px;
 }
-.botaoRedondo:hover{
-    background-color: blue;
-    cursor: pointer;
-}
-.barraPesquisa{
+/* ----- BARRA DE PESQUISA ----- */
+#containerPrincipal .parteBaixo #barraPesquisa{
     display: inline-block;
-    width: 185px;
-    height: 100px;
+    width: 150px;
+    height: 90px;
     background-color: #52ae5f;
-
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 10px;
+    cursor: pointer;
 
     position: relative;
-    top: 245px;
-    left: -170px;
-
-    text-align: center;
-    outline: #79b5dd;
-    z-index: 999;
+    top: 60px;
+    left: -45px;
 }
-.barraPesquisa:hover{
-    cursor: pointer;
-}
-.barraPesquisa input{
+#containerPrincipal .parteBaixo #barraPesquisa #inputPesquisa{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-
     text-align: center;
     width: 145px;
     color: #ffffff;
@@ -538,105 +472,395 @@ button{
     border: none;
     background: transparent;
     font-weight: 600;
-}
-.barraPesquisa input:hover{
     cursor: pointer;
 }
+/* ----- BOTÃO PESQUISAR ----- */
+#botaoPesquisar{
+    height: 55px;
+    width: 55px;
+    background-color: #232323;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
 
-
-.trianguloInvertido{
-        width: 0;
-        height: 0;
-        border-left: 15px solid transparent;
-        border-right: 15px solid transparent;
-        border-top: 15px solid #232323;
+    position: absolute;
+    top: 75px;
+    left: 22px;
 }
-.corpoSeta{
+#botaoPesquisar:hover{
+    background-color: blue;
+}
+/* ----- SETAS ----- */
+#setas{
+    display: flex;
+    position: absolute;
+
+    top: 40px;
+    left: 308px;
+}
+.seta{
+    height: max-content;
+    width: max-content;
+
+    cursor: pointer;
+}
+#setas .seta .corpoCima{
     background-color: #232323;
     width: 30px;
     height: 50px;
-
     border-radius: 10px 10px 0 0;
-}
-.setaCima{
-    position: relative;
-    top:0;
 
-    width: 30px;
+    box-sizing: content-box;
 }
-.setaCima:hover{
-    cursor: pointer;
-}
-.setaEsquerda{
-    transform: rotate(270deg);
-    position: relative;
-    top: -163px;
-    left: -32px;
+#setas .seta .pontaCima{
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #232323;
 
+    box-sizing: content-box;
+}
+
+#setas .seta .corpoDireita{
+    background-color: #232323;
     width: 30px;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+
+    box-sizing: content-box;
 }
-.setaEsquerda:hover{
-    cursor: pointer;
+#setas .seta .pontaDireita{
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #232323;
+
+    box-sizing: content-box;
 }
-.setaDireita{
+
+#setas .seta .corpoBaixo{
+    background-color: #232323;
+    width: 30px;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+
+    box-sizing: content-box;
+}
+#setas .seta .pontaBaixo{
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #232323;
+
+    box-sizing: content-box;
+}
+
+#setas .seta .corpoEsquerda{
+    background-color: #232323;
+    width: 30px;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+
+    box-sizing: content-box;
+}
+#setas .seta .pontaEsquerda{
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #232323;
+
+    box-sizing: content-box;
+}
+
+#setaDireita{
     transform: rotate(90deg);
-    position: relative;
-    top: -33px;
-    left: 32px;
 
-    width: 30px;
+    position: relative;
+    top: 32px;
+    left: 2px;
 }
-.setaDireita:hover{
-    cursor: pointer;
-}
-.setaBaixo{
+#setaBaixo{
     transform: rotate(180deg);
+
     position: relative;
-    top: -66px;
-    left: 0;
+    top: 65px;
+    left: -90px;
+}
+#setaEsquerda{
+    transform: rotate(270deg);
 
-    width: 30px;
-}
-.setaBaixo:hover{
-    cursor: pointer;
-}
-.setinhas{
     position: relative;
-    top: 127px;
-    left: 360px;
-
-    width: 80px;
-    height: 130px;
-
+    top: 32px;
+    left: -92px;
 }
-.container, #tampa{
-    display: inline-block;
+/* ----- TAMPA ----- */
+#tampa .containerSecundario{
+    background-color: var(--cor-principal);
+    width: 437.5px;
+    height: 500px;
+    border-radius: 0 0 10px 0;
+   
 }
-/*-----------------------------------*/
-
-
-.topBase .tela img{
-    position: absolute;
-    left: 10%;
-    bottom: 1%;
-
-    height: 100%;
+#tampa .trapezio{
+    border-bottom: 100px solid var(--cor-principal);
+    border-right: 100px solid transparent;
+    height: 0;
+    width: 260px;
+    margin-top: 100px;
 }
-.tela2 h1{
+/* ----- TAMPA PARTE MEIO ----- */
+#tampa .containerSecundario .parteMeio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* ------ TELA SECUNDARIA ----- */
+#telaSecundaria{
+    background-color: #232323;
+    width: 380px;
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    padding: 5px;
+
+    position: relative;
+    top: 30px;
+}
+#telaSecundaria .titulo{
     color:#dedede;
     font-size: 150%;
-    
-    position: absolute;
-    top: 10px;
-    left: 10px;
-
+    text-align: left;
     text-transform: capitalize;
-    max-width: 360px;
+    white-space: pre-line;
 }
-.tela2 p{
-    color:#dedede;
+#telaSecundaria .descricao{
+    color:#ccd999;
+    text-align: left;
+    white-space: pre-line;
+    line-height: 19px;
+}
+/* ----- BOTOES AZUIS ----- */
+#botoesAzuis{
+    width: 380px;
+    height: 124px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+#botoesAzuis .botaoAzul{
+    background-color: lightblue;
+    width: 74px;
+    height: 60px;
+    cursor: pointer;
+}
+#botoesAzuis .botaoAzul:hover{
+    background-color: blue;
+}
+#botoesAzuis .botao1{
+    border-radius: 5px 0 0 0;
+}
+#botoesAzuis .botao2{
+    border-radius: 0 5px 0 0;
+}
+#botoesAzuis .botao3{
+    border-radius: 0 0 5px 0;
+}
+#botoesAzuis .botao4{
+    border-radius: 0 0 0 5px;
+}
+/* ----- TAMPA PARTE BAIXO ----- */
+#tampa .parteBaixo{
+    position: relative;
+}
+/* ----- BOTÕES MENORES ----- */
+#tampa .parteBaixo .botoesMenores{
+    width: max-content;
+    position: relative;
+    left: 280px;
+    top: 10px;
+}
+#tampa .parteBaixo .botoesMenores .botaoMenor{
+    background-color: #232323;
+    width: 60px;
+    height: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    border: 2px solid black;
+}
+#tampa .parteBaixo .botoesMenores .botaoMenor:hover{
+    background-color: blue;
+}
+/* ----- BOTÕES BRANCOS ----- */
+#tampa .parteBaixo .botoesBrancos{
+    width: 152px;
+    height: 62px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid black;
+
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+#tampa .parteBaixo .botoesBrancos .botaoBranco{
+    background-color: #dedede;
+    width: 74px;
+    height: 60px;
+
+    cursor: pointer;
+}
+#tampa .parteBaixo .botoesBrancos .botaoBranco:hover{
+    background-color: blue;
+}
+#tampa .parteBaixo .botoesBrancos .botao1{
+    border-radius: 5px 0 0 5px;
+}
+#tampa .parteBaixo .botoesBrancos .botao2{
+    border-radius: 0 5px 5px 0;
+}
+/* ----- LED GRANDE AMARELO ----- */
+#tampa .parteBaixo .ledGrandeAmarelo{
+    background-color: #bda51f;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid black;
 
     position: absolute;
-    top: 45px;
-    left: 10px;
+    top:45px;
+    left: 320px;
 }
+#tampa .parteBaixo .ledGrandeAmarelo .luz{
+    background-color: #ffff58;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+/* ----- BOTÕES PRETOS ---- */
+#tampa .parteBaixo .botoesPretos{
+    display: flex;
+    gap: 40px;
+    width: max-content;
+
+    position: relative;
+    top: 45px;
+    left: 30px;
+}
+#tampa .parteBaixo .botoesPretos .botaoPreto{
+    background-color: #232323;
+    width: 170px;
+    height: 60px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    border: 2px solid black;
+}
+#tampa .parteBaixo .botoesPretos .botaoPreto:hover{
+    background-color: blue;
+}
+/*
+@media (max-width: 880px){
+    #pokedex{
+    
+        margin-top: 25px;
+    
+    }
+}
+@media (max-width: 860px){
+    #pokedex{
+    
+        margin-top: 35px;
+    
+    }
+}
+@media (max-width: 840px){
+    #pokedex{
+    
+        margin-top: 45px;
+    
+    }
+}
+@media (max-width: 820px){
+    #pokedex{
+    
+        margin-top: 55px;
+    
+    }
+}
+@media (max-width: 800px){
+    #pokedex{
+    
+        margin-top: 65px;
+    
+    }
+}
+@media (max-width: 780px){
+    #pokedex{
+    
+        margin-top: 75px;
+    
+    }
+}
+@media (max-width: 760px){
+    #pokedex{
+    
+        margin-top: 85px;
+    
+    }
+}
+@media (max-width: 740px){
+    #pokedex{
+    
+        margin-top: 120px;
+    
+    }
+}
+@media (max-width: 650px){
+    #pokedex{
+    
+        margin-top: 200px;
+    
+    }
+}
+@media (max-width: 610px){
+    #pokedex{
+    
+        margin-top: 205px;
+    
+    }
+}
+@media (max-width: 600px){
+    #pokedex{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    #tampa{
+        margin-top: 15px;
+    }
+}
+@media (max-height: ) {
+
+}*/
+    

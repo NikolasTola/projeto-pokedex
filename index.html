@@ -1,136 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icone.png">
     <title>Pokedex</title>
 </head>
 <body>
-    <div id="pokedex">
-        <div class="container">
-            <div class="main">
-                <div class="mostruario">
-                    <div class="base">
-                        <div class="topBase">
-                            <div class="ledPequeno1"></div>
-                            <div class="ledPequeno2"></div>
-                            <div class="tela">
-                                <img class="imagemPokemon" src="#" alt="Pokemon">
+    <main>
+        <div id="pokedex">
+            <div id="containerPrincipal">
+                <div class="parteCima">
+                    <div class="retangulo">
+                        <div id="ledPesquisa">
+                            <div class="ledVermelho">
+                                <div class="luz"></div>
                             </div>
-                            <div class="ledMedio"></div>
-    
-                            <div class="ventuinha"></div>
-                            <div class="ventuinha"></div>
-                            <div class="ventuinha"></div>
-                            <div class="ventuinha"></div>
-                            <audio id="cryPokemon" src="#"></audio>
+                            <div class="ledAmarelo">
+                                <div class="luz"></div>
+                            </div>
+                            <div class="ledVerde">
+                                <div class="luz"></div>
+                            </div>
                         </div>
-                        <div class="underBase"></div>
                     </div>
-                </div>
-                <div class="led1"></div>
-                <div class="led2"></div>
-                <button title="Pesquisar" class="botaoRedondo"></button>
-                <label title="Barra de Pesquisa" class="barraPesquisa">
-                        <input class="pesquisar" type="text" >
-                </label>
-                <div class="setinhas">
-                    <div class="setaCima">
-                        <div class="corpoSeta corpoSetaCima"></div>
-                        <div class="trianguloInvertido baixoSetaCima"></div>
+                    <div class="trapezio">
+                        <div id="ledGrande">
+                            <div class="base">
+                                <div class="led">
+                                    <div class="luz"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="setaDireita">
-                        <div class="corpoSeta corpoSetaDireita"></div>
-                        <div class="trianguloInvertido baixoSetaDireita"></div>
-                    </div>
-                    <div class="setaBaixo">
-                        <div class="corpoSeta corpoSetaBaixo"></div>
-                        <div class="trianguloInvertido baixoSetaBaixo"></div>
-                    </div>
-                    <div class="setaEsquerda">
-                        <div class="corpoSeta corpoSetaEsquerda"></div>
-                        <div class="trianguloInvertido baixoSetaEsquerda"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="retanguloInvertido">
-                <div class="ledPequenos">
-                    <div class="ledPequeno1 ledPequenoVermelho">
-                        <div class="luz"></div>
-                    </div>
-                    <div class="ledPequeno2 ledPequenoAmarelo">
-                        <div class="luz"></div>
-                    </div>
-                    <div class="ledPequeno3 ledPequenoVerde">
-                        <div class="luz"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="trapezioInvertido">
-                <div class="ledGrande">
-                    <div class="base">
-                        <div class="led">
+                    <div id="dobradica">
+                        <div class="parte1">
+                            <div class="luz"></div>
+                        </div>
+                        <div class="parte2">
+                            <div class="curva"></div>
+                            <div class="luz"></div>
+                        </div>
+                        <div class="parte3">
+                            <div class="curva"></div>
                             <div class="luz"></div>
                         </div>
                     </div>
                 </div>
+                <div class="parteMeio">
+                    <div id="telaPrincipal">
+                        <div class="base">
+                            <div class="retangulo">
+                                <div class="ledPequenos">
+                                    <div class="led"></div>
+                                    <div class="led"></div>
+                                </div>
+                                <div class="tela">
+                                    <div id="estrela"></div>
+                                    <div id="femaleSymbol">
+                                        <div class="parteCima"></div>
+                                        <div class="parteBaixo">
+                                            <div class="traco1"></div>
+                                            <div class="traco2"></div>
+                                        </div>
+                                    </div>
+                                
+                                    <div id="maleSymbol">
+                                        <div class="parteCima"></div>
+                                        <div class="parteBaixo">
+                                            <div class="traco1"></div>
+                                            <div class="traco2"></div>
+                                            <div class="traco3"></div>
+                                        </div>
+                                    </div>
+                                    <img id="imagemTelaPrincipal" draggable="false" alt="">
+                                </div>
+                            </div>
+                            <div class="trapezio">
+                                <div class="ledMedio"></div>
+                                <div class="ventuinhas">
+                                    <div class="ventuinha"></div>
+                                    <div class="ventuinha"></div>
+                                    <div class="ventuinha"></div>
+                                    <div class="ventuinha"></div>
+                                </div>
+                                <audio id="audioPrincipal" src="#"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="parteBaixo">
+
+                    <div id="ledMenores">
+                        <div id="ledNotShiny" class="led1"></div>
+                        <div id="ledShiny" class="led2"></div>
+                    </div>
+                    <label id="barraPesquisa" title="Barra de Pesquisa">
+                        <input id="inputPesquisa" title="Barra de Pesquisa" type="text">
+                    </label>
+                    <button title="Pesquisar" id="botaoPesquisar"></button>
+
+                    <div id="setas">
+                        <div class="seta" id="setaCima">
+                            <div class="corpoCima"></div>
+                            <div class="pontaCima"></div>
+                        </div>
+                        <div class="seta" id="setaDireita">
+                            <div class="corpoDireita"></div>
+                            <div class="pontaDireita"></div>
+                        </div>
+                        <div class="seta" id="setaEsquerda">
+                            <div class="corpoEsquerda"></div>
+                            <div class="pontaEsquerda"></div>
+                        </div>
+                        <div class="seta" id="setaBaixo">
+                            <div class="corpoBaixo"></div>
+                            <div class="pontaBaixo"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <class class="dobradica">
-                <div class="parte1">
-                    <div class="luzDobradica1"></div>
+            <div id="tampa">
+                <div class="trapezio"></div>
+                <div class="containerSecundario">
+                    <div class="parteMeio">
+                        <div id="telaSecundaria">
+                            <h2 class="titulo"></h2>
+                            <p class="descricao"></p>
+                        </div>
+
+                        <div id="botoesAzuis">
+                            <button title="Nome e Número" id="botaoPokemonNomeNum" class="botao1 botaoAzul"></button>
+                            <button title="Descrição" id="botaoPokemonDescricao" class="botaoAzul"></button>
+                            <button title="Tipo" id="botaoPokemonTipo" class="botaoAzul"></button>
+                            <button title="Altura e Peso" id="botaoPokemonAlturaPeso" class="botaoAzul"></button>
+                            <button title="Som" id="botaoPokemonSom" class="botao2 botaoAzul"></button>
+                
+                            <button title="Habilidades" id="botaoPokemonHabilidades" class="botao4 botaoAzul"></button>
+                            <button title="Cadeia Evolutiva" id="botaoPokemonCadeiaEvolutiva" class="botaoAzul"></button>
+                            <button title="Status Base" id="botaoPokemonStatusBase" class="botaoAzul"></button>
+                            <button title="Versão Shiny" id="botaoPokemonShiny" class="botaoAzul"></button>
+                            <button title="Genero" id="botaoPokemonGenero" class="botao3 botaoAzul"></button>
+                        </div>
+                    </div>
+
+                    <div class="parteBaixo">
+                        <div class="botoesMenores">
+                            <button class="botaoMenor"></button>
+                            <button class="botaoMenor"></button>
+                        </div>
+
+                        <div class="botoesBrancos">
+                            <button title="Pokémon de Frente" id="botaoPokemonFrente" class="botao1 botaoBranco"></button>
+                            <button title="Pokémon de Costas" id="botaoPokemonCostas" class="botao2 botaoBranco"></button>
+                        </div>
+
+                        <div class="ledGrandeAmarelo">
+                            <div class="luz"></div>
+                        </div>
+                        <div class="botoesPretos">
+                            <button title="Pokémon Anterior" id="botaoAnterior" class="botaoPreto"></button>
+                            <button title="Próximo Pokémon" id="botaoProximo" class="botaoPreto"></button>
+                        </div>
+                    </div>
                 </div>
-    
-                <div class="parte2">
-                    <div class="curva1"></div>
-                    <div class="luzDobradica2"></div>
-                </div>
-    
-                <div class="parte3">
-                    <div class="curva2"></div>
-                    <div class="luzDobradica3"></div>
-                </div>
-            </class>
+            </div>
         </div>
-        <div id="tampa">
-            <div class="trapezio"></div>
-            <div class="retangulo"></div>
-            <div class="tela2">
-                <h1 class="titulo"></h1>
-                <p class="descricao"></p>
-            </div>
-            <div class="botoesAzuis">
-                <button title="Nome e Número" class="botao1 botaoAzul"></button>
-                <button title="Descrição" class="botaoAzul"></button>
-                <button title="Altura" class="botaoAzul"></button>
-                <button title="Peso" class="botaoAzul"></button>
-                <button title="Som" class="botao2 botaoAzul"></button>
-    
-                <button title="Habilidades" class="botao4 botaoAzul"></button>
-                <button title="Cadeia Evolutiva" class="botaoAzul"></button>
-                <button title="Status Base" class="botaoAzul"></button>
-                <button title="Versão Shiny" class="botaoAzul"></button>
-                <button title="Versão Normal" class="botao3 botaoAzul"></button>
-            </div>
-            <div class="botoesMenoresPretos">
-                <button class="botao1"></button>
-                <button class="botao2"></button>
-            </div>
-            <div>
-                <div class="botoesMenoresBrancos">
-                    <button title="Pokémon de Frente" class="botao1"></button>
-                    <button title="Pokémon de Costas" class="botao2"></button>
-                </div>
-                <div class="ledAmarelo">
-                    <div class="luz"></div>
-                </div>
-            </div>
-            <div class="botoesMaioresPretos">
-                <button title="Pokémon Anterior" class="botao1 botaoAnt"></button>
-                <button title="Próximo Pokémon" class="botao2 botaoProx"></button>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="pokedexDesign.js"></script>
-    <script type="text/javascript" src="pokedex.js"></script>
+    </main>
+    <script src="script.js"></script>
+    <script src="conexaoAPI.js"></script>
 </body>
 </html>
