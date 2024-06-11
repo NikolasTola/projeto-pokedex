@@ -3,6 +3,34 @@
 :root{
     --cor-principal: #db0b2d;
     --cor-secundaria: #fa647d;
+
+    --ledP-verde: #345733;
+    --ledP-verde-luz: #87ac86;
+
+    --ledP-verde-aceso: #40ff1e;
+    --ledP-verde-luz-aceso: #a9fda7;
+
+    --ledP-vermelho: #800417;
+    --ledP-vermelho-luz: #c5384d;
+
+    --ledP-vermelho-aceso: #ff2424;
+    --ledP-vermelho-luz-aceso: #ff4f69;
+
+    --ledP-amarelo: #bda51f;
+    --ledP-amarelo-luz: #dfcc62;
+
+    --ledP-amarelo-aceso: #ffe240;
+    --ledP-amarelo-luz-aceso: #ffee8e;
+
+    --ledGrande: #19699e;
+    --ledGrande-luz: #79b5dd;
+    --ledGrande-aceso: #26a9ff;
+    --ledGrande-luz-aceso: #50b9ff;
+
+    --ledClick: #bda51f;
+    --ledClick-luz: #ffff58;
+    --ledClick-aceso: #ffdf2b; 
+    --ledClick-luz-aceso: #ffff7e;
 }
 *{
     box-sizing: border-box;
@@ -59,14 +87,14 @@ main{
 #containerPrincipal .parteCima .trapezio #ledGrande .base .led{
     height: 100px;
     width: 100px;
-    background-color: #19699e;
+    background-color: var(--ledGrande);
     border-radius: 50%;
     border: 1px solid black;
 }
 #containerPrincipal .parteCima .trapezio #ledGrande .base .led .luz{
     height: 40px;
     width: 40px;
-    background-color: #79b5dd;
+    background-color: var(--ledGrande-luz);
     border-radius: 50%;
 
     position: relative;
@@ -88,12 +116,12 @@ main{
     width: 30px;
     border-radius: 50%;
     border: 2px solid black;
-    background-color: #800417
+    background-color: var(--ledP-vermelho);
 }
 #containerPrincipal .parteCima .retangulo #ledPesquisa .ledVermelho .luz{
     width: 13px;
     height: 13px;
-    background-color: #c5384d;
+    background-color: var(--ledP-vermelho-luz);
     border-radius: 50%;
     position: relative;
     top: 2.5px;
@@ -104,12 +132,12 @@ main{
     width: 30px;
     border-radius: 50%;
     border: 2px solid black;
-    background-color:#345733;
+    background-color:var(--ledP-verde);
 }
 #containerPrincipal .parteCima .retangulo #ledPesquisa .ledVerde .luz{
     width: 13px;
     height: 13px;
-    background-color: #87ac86;
+    background-color: var(--ledP-verde-luz);
     border-radius: 50%;
     position: relative;
     top: 2.5px;
@@ -120,12 +148,12 @@ main{
     width: 30px;
     border-radius: 50%;
     border: 2px solid black;
-    background-color: #bda51f;
+    background-color: var(--ledP-amarelo);
 }
 #containerPrincipal .parteCima .retangulo #ledPesquisa .ledAmarelo .luz{
     width: 13px;
     height: 13px;
-    background-color: #dfcc62;
+    background-color: var(--ledP-amarelo-luz);
     border-radius: 50%;
     position: relative;
     top: 2.5px;
@@ -361,13 +389,13 @@ main{
     left: 0;
 }
 #maleSymbol{
-    transform: scale(0.4);
+    transform: scale(0.4) rotate(225deg);;
     width: max-content;
     height: max-content;
 
     position: absolute;
-    top: 0;
-    left: 253px;
+    top: -24px;
+    left: 265px;
 }
 #maleSymbol .parteCima{
     width: 50px;
@@ -739,7 +767,7 @@ main{
 }
 /* ----- LED GRANDE AMARELO ----- */
 #tampa .parteBaixo .ledGrandeAmarelo{
-    background-color: #bda51f;
+    background-color: var(--ledClick);
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -750,7 +778,7 @@ main{
     left: 320px;
 }
 #tampa .parteBaixo .ledGrandeAmarelo .luz{
-    background-color: #ffff58;
+    background-color: var(--ledClick-luz);
     height: 30px;
     width: 30px;
     border-radius: 50%;

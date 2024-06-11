@@ -6,10 +6,6 @@ const inputPesquisa = document.querySelector('#inputPesquisa');
 const botaoPesquisar = document.querySelector('#botaoPesquisar');
 const botaoProximo = document.querySelector('#botaoProximo');
 const botaoAnterior = document.querySelector('#botaoAnterior');
-const ledPesquisa = document.querySelector('#ledPesquisa');
-const ledPesquisaVermelho = ledPesquisa.querySelector('.ledVermelho');
-const ledPesquisaAmarelo = ledPesquisa.querySelector('.ledAmarelo');
-const ledPesquisaVerde = ledPesquisa.querySelector('.ledVerde');
 const imagemTelaPrincipal = document.querySelector('#imagemTelaPrincipal');
 
 const botaoPokemonCostas = document.querySelector('#botaoPokemonCostas');
@@ -57,9 +53,7 @@ const renderizaPokemon = async (pokemon) =>{
     var isShiny = false;
     acendeLedNotShiny();
     titulo.innerHTML = 'Procurando...';
-    ledPesquisaVerde.setAttribute('style', 'background-color:#345733;');
-    ledPesquisaVermelho.setAttribute('style', 'background-color:#800417;');
-    ledPesquisaAmarelo.setAttribute('style', 'background-color:yellow;');
+    acendeLedPesquisaAmarelo();
     dadosPokemon = await pesquisaPokemon(pokemon);
 
 
@@ -71,9 +65,8 @@ const renderizaPokemon = async (pokemon) =>{
         audioPrincipal.play();
 
         pokemonAtual = dadosPokemon.id;
-        ledPesquisaAmarelo.setAttribute('style', 'background-color:#bda51f;');
-        ledPesquisaVermelho.setAttribute('style', 'background-color:#800417;');
-        ledPesquisaVerde.setAttribute('style', 'background-color:lightgreen;');
+        acendeLedPesquisaVerde();
+        piscaLedGrande();
     } else{
         titulo.innerHTML = "Pokemon não encontrado!";
         estrela.setAttribute('style', 'display: none');
@@ -83,9 +76,7 @@ const renderizaPokemon = async (pokemon) =>{
         ledShiny.setAttribute('style', 'bacground-color: #800417');
         ledNotShiny.setAttribute('style', 'bacground-color: #141477');
         imagemTelaPrincipal.src = 'erro.png';
-        ledPesquisaAmarelo.setAttribute('style', 'background-color:#bda51f;');
-        ledPesquisaVerde.setAttribute('style', 'background-color:#345733;');
-        ledPesquisaVermelho.setAttribute('style', 'background-color:red;');
+        acendeLedPesquisaVermelho();
     }   
 }
 
@@ -117,8 +108,10 @@ inputPesquisa.addEventListener('keypress', function(e){
     }
 });
 botaoPesquisar.addEventListener('click', function(){
+        piscaLedClick()
         if (inputPesquisa.value != "") {
             renderizaPokemon((inputPesquisa.value).toLowerCase());
+            piscaLedClick()
             isShiny = false;
             acendeLedNotShiny();
             estrela.setAttribute('style', 'display: none');
@@ -133,6 +126,7 @@ inputPesquisa.onkeypress = function(e) {
 };
 
 botaoProximo.addEventListener('click', function(){
+    piscaLedClick()
     if (pokemonAtual < 1025) {
         genero = 'macho';
         simboloMacho.setAttribute('style', 'display: block');
@@ -147,7 +141,7 @@ botaoProximo.addEventListener('click', function(){
     }
 });
 botaoAnterior.addEventListener('click', function(){
-    
+    piscaLedClick()
     if(pokemonAtual > 1){
         genero = 'macho';
         simboloMacho.setAttribute('style', 'display: block');
@@ -163,6 +157,7 @@ botaoAnterior.addEventListener('click', function(){
 });
 
 botaoPokemonCostas.addEventListener('click', async function(){
+    piscaLedClick()
     let dados = await pesquisaPokemon(pokemonAtual);
     if (imagemTelaPrincipal.src != 'erro.png' ) {
         if (isShiny) {
@@ -197,6 +192,7 @@ botaoPokemonCostas.addEventListener('click', async function(){
 });
 
 botaoPokemonFrente.addEventListener('click', async function(){
+    piscaLedClick()
     let dados = await pesquisaPokemon(pokemonAtual);
     if (imagemTelaPrincipal.src != 'erro.png' ) {
         if (isShiny) {
@@ -230,6 +226,7 @@ botaoPokemonFrente.addEventListener('click', async function(){
     } 
 });
 botaoPokemonNomeNum.addEventListener('click', async function(){
+    piscaLedClick()
     descricao.innerHTML = ""
 
     let dados = await pesquisaPokemon(pokemonAtual);
@@ -237,11 +234,13 @@ botaoPokemonNomeNum.addEventListener('click', async function(){
     
 });
 botaoPokemonDescricao.addEventListener('click', function(){
+    piscaLedClick()
     titulo.innerHTML = "";
 
     descricao.innerHTML = "FUNÇÃO NÃO IMPLEMENTADA..." 
 });
 botaoPokemonTipo.addEventListener('click', async function(){
+    piscaLedClick()
 
     descricao.innerHTML = "";
 
@@ -255,18 +254,21 @@ botaoPokemonTipo.addEventListener('click', async function(){
     titulo.innerHTML = tipos;
 })
 botaoPokemonSom.addEventListener('click', function(){
+    piscaLedClick()
     titulo.innerHTML = '';
     descricao.innerHTML = '';
 
     audioPrincipal.play();
 });
 botaoPokemonAlturaPeso.addEventListener('click', function(){
+    piscaLedClick()
     titulo.innerHTML = '';
     
     descricao.innerHTML = "FUNÇÃO NÃO IMPLEMENTADA..." ;
 });
 
 botaoPokemonHabilidades.addEventListener('click', async function(){
+    piscaLedClick()
     descricao.innerHTML = "";
 
     let dados = await pesquisaPokemon(pokemonAtual);
@@ -289,11 +291,13 @@ botaoPokemonHabilidades.addEventListener('click', async function(){
     titulo.innerHTML = habilidades;
 });
 botaoPokemonCadeiaEvolutiva.addEventListener('click', function(){
+    piscaLedClick()
     titulo.innerHTML = "";
 
     descricao.innerHTML = "FUNÇÃO NÃO IMPLEMENTADA..."
 });
 botaoPokemonStatusBase.addEventListener('click', async function(){
+    piscaLedClick()
     titulo.innerHTML = "";
 
     let dados = await pesquisaPokemon(pokemonAtual);
@@ -307,6 +311,7 @@ botaoPokemonStatusBase.addEventListener('click', async function(){
     
 
 botaoPokemonShiny.addEventListener('click', async function(){
+    piscaLedClick()
     titulo.innerHTML = '';
     descricao.innerHTML = '';
 
@@ -381,6 +386,7 @@ botaoPokemonShiny.addEventListener('click', async function(){
 });
 
 botaoPokemonGenero.addEventListener('click', async function(){
+    piscaLedClick()
     titulo.innerHTML = '';
     descricao.innerHTML = '';
     
